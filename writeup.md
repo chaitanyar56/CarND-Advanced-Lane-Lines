@@ -50,35 +50,35 @@ The code for my perspective transform includes a function called `unwarp_img()`,
 
 ```python
 h,w = image.shape[:2]
-# Define 4 source points (which takes shape of trapezoid)
-src = np.float32([[170, h], [550, 460],[745, 460], [1200, h]])
+#Define 4 source points (which takes shape of trapezoid)
+src = np.float32([[170, h], [550, 480],[750, 480], [1200, h]])
 # Define 4 destination points (which takes shape of rectangle)
-dst = np.float32([[100, h], [100, 0], [1100, 0], [1100, h]])
+dst = np.float32([[250, h], [250, 0], [1050, 0], [1050, h]])
 ```
 
 This resulted in the following source and destination points:
 
 | Source        | Destination   |
 |:-------------:|:-------------:|
-| 170, 720      | 100, 720        |
-| 550, 460      | 100, 0      |
-| 1100, 460     | 1100, 0      |
-| 1200, 720      | 1100, 720        |
+| 170, 720      | 250, 720        |
+| 550, 480      | 250, 0      |
+| 1100, 480     | 1050, 0      |
+| 1200, 720      | 1050, 720        |
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
 ![alt text][image3]
 
 #### 4. Detecting lane line pixels and finding a Polynomial fit
- Applying histogram on the warped image gives the location of left and right lines, that information is used to define a search window to detect the location of left and right lane pixels. Using the coordinates of the pixels a second order polynomial fit is used to draw a smooth curve. Cell 13 has the code and example image is shown in the figure 4.
+ Applying histogram on the warped image gives the location of left and right lines, that information is used to define a search window to detect the location of left and right lane pixels. Using the coordinates of the pixels a second order polynomial fit is used to draw a smooth curve. Cell 12 has the code and example image is shown in the figure 4.
 
 ![alt text][image4]
 
 #### 5. Radius of curvature
-Radius of curvature is calculation and distance from center calculation is done in the code cell 31 with the help of lecture notes. Distance from the center is calculated as difference between the center of lanelines and center of the image.
+Radius of curvature is calculation and distance from center calculation is done in the code cell 15 with the help of lecture notes. Distance from the center is calculated as difference between the center of lanelines and center of the image.
 
 #### 6. Pipeline
-The Pipeline is defined in the code cell 32 and it is tested with test image 6 in code cell 33. Result for the pipeline is shown in the figure 5
+The Pipeline is defined in the code cell 16 and it is tested with test image 6 in code cell 17. Result for the pipeline is shown in the figure 5
 
 ![alt text][image5]
 
