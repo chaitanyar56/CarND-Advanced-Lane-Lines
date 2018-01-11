@@ -13,11 +13,11 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/undistort.jpg "Undistorted"
-[image2]: ./output_images/combined_thresh.jpg "Binary Example"
-[image3]: ./output_images/unwarp.jpg "Warp Example"
-[image4]: ./output_images/histogram_polyfit.jpg "Fit Visual"
-[image5]: ./output_images/final_output.jpg "Output"
+[image1]: ./output_images/undistort.JPG "Undistorted"
+[image2]: ./output_images/combined_thresh.JPG "Binary Example"
+[image3]: ./output_images/unwarp.JPG "Warp Example"
+[image4]: ./output_images/histogram_polyfit.JPG "Fit Visual"
+[image5]: ./output_images/final_output.JPG "Output"
 
 ---
 Link to my project [code](https://github.com/chaitanyar56/CarND-Advanced-Lane-Lines/blob/master/advancedLaneLines_pipeline.ipynb)
